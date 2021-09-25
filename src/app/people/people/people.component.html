@@ -1,0 +1,5 @@
+<h1>Buscar</h1>
+<input type="search" placeholder="Busca aquí personajes" [(ngModel)]="search" (ngModelChange)="onUserWritesSearch()">
+
+<app-rick-of-the-day *ngIf="!showResults"></app-rick-of-the-day>
+<app-rickgoogle *ngIf="showResults" query={{search}}></app-rickgoogle>

@@ -1,0 +1,16 @@
+<div class="host" *ngIf="_personmodel">
+    <img src={{_personmodel.image}} width="250" height="250">
+    <div class="body">
+        <h1>{{_personmodel.name}}</h1>
+        <div class="first">
+            <div class="dead-icon" [style.background-color]="colordead"></div>
+            <p>{{_personmodel.status}}</p>
+            <p>-</p>
+            <p>{{_personmodel.species}}</p>
+        </div>
+        <p>Ultima localización conocida</p>
+        <h3>{{_personmodel.location.name}}</h3>
+        <p>Visto por primera vez en</p>
+        <h3>{{_personmodel.episode.pop()}}</h3>
+    </div>
+</div>
